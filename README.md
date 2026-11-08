@@ -2,6 +2,10 @@
 
 A personal AI/technology intelligence pipeline with two usable workflows.
 
+I built it for myself to keep up with robotics and AI engineering news without reading every feed and newsletter. It is aimed at anyone who follows many RSS feeds and email newsletters and wants one short daily briefing instead.
+
+**Built with:** Python, FastAPI, Pydantic, pytest, Make.com (orchestration) and the Gemini API (summarisation).
+
 | Version | Output | Architecture | Best for |
 | --- | --- | --- | --- |
 | **V1 — Obsidian** | Markdown report | Make.com → Gemini → Drive/Obsidian | People who want a searchable personal knowledge base |
@@ -92,6 +96,10 @@ V1 and V2 solve slightly different problems.
 - **V2** favors low-friction daily consumption.
 - The evolution from V1 to V2 also documents the engineering trade-off between rapid workflow validation and a more deterministic production-oriented pipeline.
 
+## Roadmap
+
+Planned work (deployment, CI, source management, better deduplication) is listed in **[ROADMAP.md](ROADMAP.md)**.
+
 ## Security
 
 Public blueprints in this repository are sanitized.
@@ -101,7 +109,8 @@ Public blueprints in this repository are sanitized.
 - no temporary Cloudflare Tunnel URL
 
 Reconnect your own Make.com accounts and credentials after importing a blueprint.
+For the FastAPI service, copy `.env.example` to `.env` and set your own `PIPELINE_API_KEY`.
 
 ## License
 
-MIT License
+MIT License. See [LICENSE](LICENSE).
